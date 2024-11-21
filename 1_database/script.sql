@@ -7,3 +7,12 @@ CREATE TABLE Client (
     phone VARCHAR(15),
     address TEXT
 ) ENGINE=InnoDB;
+
+
+---supplier table---
+CREATE TABLE Supplier (
+    supplier_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    contact_info TEXT,
+    region VARCHAR(50)
+) ENGINE=InnoDB;
