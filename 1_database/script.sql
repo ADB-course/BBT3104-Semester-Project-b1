@@ -24,3 +24,15 @@ CREATE TABLE Machine (
     name VARCHAR(100),
     status ENUM('Operational', 'Under Maintenance', 'Out of Service') NOT NULL
 ) ENGINE=InnoDB;
+
+
+---order table---
+CREATE TABLE `Order` (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT NOT NULL,
+    order_date DATE NOT NULL,
+    scheduled_delivery_date DATE NOT NULL,
+    actual_delivery_date DATE,
+    delivery_status ENUM('On Time', 'Delayed', 'Cancelled'),
+    FOREIGN KEY (client_id) REFERENCES Client(client_id)
+) ENGINE=InnoDB;
