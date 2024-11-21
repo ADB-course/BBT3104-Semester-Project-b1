@@ -16,3 +16,11 @@ CREATE TABLE Supplier (
     contact_info TEXT,
     region VARCHAR(50)
 ) ENGINE=InnoDB;
+
+
+-----machine table-----
+CREATE TABLE Machine (
+    machine_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    status ENUM('Operational', 'Under Maintenance', 'Out of Service') NOT NULL
+) ENGINE=InnoDB;
